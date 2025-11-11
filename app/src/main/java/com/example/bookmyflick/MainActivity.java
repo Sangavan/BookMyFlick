@@ -249,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     private void showAdminPinDialog() {
         EditText input = new EditText(this);
         input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);
