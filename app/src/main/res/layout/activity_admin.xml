@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/input_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        android:layout_marginTop="12dp" />
+
+    <EditText
+        android:id="@+id/input_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Language"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_image_res_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Drawable name (poster)"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_detail_image_res_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Drawable name (detail image)"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_cast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cast (comma-separated)"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Year (e.g., 2024)"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_director"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Director"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Rating (0 - 10)"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category (now or upcoming)"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update"
+            android:layout_marginStart="16dp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btn_clean_duplicates"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Duplicates" />
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/bg_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!--  Top banner with logo  -->
+        <ImageView
+            android:id="@+id/ticket_wallet_img_banner"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@color/brand_blue"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside"
+            android:src="@drawable/bookmyflick_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--  Title  -->
+        <TextView
+            android:id="@+id/ticket_wallet_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:gravity="center"
+            android:text="Ticket Wallet"
+            android:textColor="@color/brand_blue_dark"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_img_banner" />
+
+        <!--  Email input  -->
+        <EditText
+            android:id="@+id/ticket_wallet_et_email"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/ticket_wallet_bg_input"
+            android:hint="Email Address"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_tv_title" />
+
+        <!--  Phone input  -->
+        <EditText
+            android:id="@+id/ticket_wallet_et_phone"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/ticket_wallet_bg_input"
+            android:hint="+94"
+            android:inputType="phone"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_et_email" />
+
+        <!--  "Enter your Card details" label  -->
+        <TextView
+            android:id="@+id/ticket_wallet_tv_card_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Enter your Card details"
+            android:textColor="@color/brand_blue_dark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_et_phone" />
+
+        <!--  Card box  -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ticket_wallet_card_box"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/card_bg"
+            app:cardCornerRadius="12dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_tv_card_label">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Card Number"
+                    android:textColor="#777777"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/ticket_wallet_et_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ticket_wallet_bg_input_small"
+                    android:hint="Enter Your Card Number"
+                    android:inputType="number"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Name on the card"
+                    android:textColor="#777777"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/ticket_wallet_et_name_on_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/ticket_wallet_bg_input_small"
+                    android:hint="Name on the card"
+                    android:inputType="textPersonName"
+                    android:padding="8dp" />
+
+                <!--  Row for expiry and cvv  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Expiry"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="CVV"
+                        android:textAlignment="center"
+                        android:textColor="#777777"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/ticket_wallet_et_expiry_mm"
+                        android:layout_width="48dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/ticket_wallet_bg_input_small"
+                        android:hint="MM"
+                        android:inputType="number"
+                        android:padding="6dp" />
+
+                    <EditText
+                        android:id="@+id/ticket_wallet_et_expiry_yy"
+                        android:layout_width="48dp"
+                        android:layout_height="42dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/ticket_wallet_bg_input_small"
+                        android:hint="YY"
+                        android:inputType="number"
+                        android:padding="6dp" />
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <EditText
+                        android:id="@+id/ticket_wallet_et_cvv"
+                        android:layout_width="96dp"
+                        android:layout_height="42dp"
+                        android:background="@drawable/ticket_wallet_bg_input_small"
+                        android:hint="CVV"
+                        android:inputType="numberPassword"
+                        android:padding="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--  Total seats label and chip  -->
+        <TextView
+            android:id="@+id/ticket_wallet_tv_total_seats_label"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:text="Selected seats :-"
+            android:textColor="@color/brand_blue_dark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_card_box" />
+
+        <TextView
+            android:id="@+id/ticket_wallet_tv_seats"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/ticket_wallet_bg_chip"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/brand_blue_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/ticket_wallet_tv_total_seats_label"
+            app:layout_constraintStart_toEndOf="@id/ticket_wallet_tv_total_seats_label" />
+
+        <!--  Amounts label and amount box  -->
+        <TextView
+            android:id="@+id/ticket_wallet_tv_amount_label"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:text="Total Amount :-"
+            android:textColor="@color/brand_dark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_tv_total_seats_label" />
+
+        <!--  Amount value  -->
+        <TextView
+            android:id="@+id/ticket_wallet_tv_amount"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ticket_wallet_bg_amount"
+            android:paddingLeft="12dp"
+            android:paddingTop="6dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/brand_dark"
+            app:layout_constraintBaseline_toBaselineOf="@id/ticket_wallet_tv_amount_label"
+            app:layout_constraintStart_toEndOf="@id/ticket_wallet_tv_amount_label" />
+
+        <!--  Buttons  -->
+        <LinearLayout
+            android:id="@+id/ticket_wallet_btn_row"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_tv_amount_label">
+
+            <Button
+                android:id="@+id/ticket_wallet_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ticket_wallet_btn_rounded_outline"
+                android:text="Cancel"
+                android:textColor="@color/bg_white" />
+
+            <Button
+                android:id="@+id/ticket_wallet_btn_pay"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/ticket_wallet_btn_rounded_blue"
+                android:text="Pay Now"
+                android:textColor="@color/bg_white" />
+        </LinearLayout>
+
+        <!--  bottom spacer  -->
+        <View
+            android:id="@+id/ticket_wallet_bottom_spacer"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_wallet_btn_row" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

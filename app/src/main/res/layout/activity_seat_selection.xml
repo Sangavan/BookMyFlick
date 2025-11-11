@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Back Arrow at top left -->
+    <ImageView
+        android:id="@+id/ivBackArrow"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_back_arrow"
+        android:background="@drawable/card_bg"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ivBackArrow"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Movie name -->
+        <TextView
+            android:id="@+id/txtMovieName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Movie: "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#06134B"
+            android:layout_marginBottom="12dp"
+            android:padding="16dp" />
+
+        <!-- Seat status indicators -->
+        <LinearLayout
+            android:id="@+id/seatStatusLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+
+        <EditText
+            android:id="@+id/etSeatCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter seat count"
+            android:inputType="number"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:background="@android:drawable/edit_text" />
+
+        <!-- Screen label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SCREEN"
+            android:textColor="#06134B"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="#DDDDDD"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Seat layout container -->
+        <GridLayout
+            android:id="@+id/seatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:alignmentMode="alignMargins"
+            android:columnCount="7"
+            android:rowCount="8"
+            android:useDefaultMargins="true" />
+
+        <!-- Book Now button -->
+        <Button
+            android:id="@+id/btnBookNow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Now"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
